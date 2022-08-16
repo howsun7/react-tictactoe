@@ -1,9 +1,9 @@
+function Square({ value, rowIdx, colIdx, addPlayerMove }) {
 
-
-function Square({ value, rowIdx, colIdx }) {
 	return (
-		<div className="col" data-row={rowIdx} data-col={colIdx}>
-			col
+		<div className="col" data-row={rowIdx} data-col={colIdx} onClick={
+			() => addPlayerMove(rowIdx, colIdx)}>
+			{ value == "_" ? "-" : value }
 		</div>
 	)
 }
